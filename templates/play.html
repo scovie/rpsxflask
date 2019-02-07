@@ -1,0 +1,32 @@
+<!--HTML for RPS x Flask mini-app (uses Rock Paper Scissors as a basic intro to Flask-->
+<!--@scovie 7-Feb-2019-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RPS x Flask</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            input[type=button], input[type=submit], input[type=reset] {
+                background-color: #009fdb;
+                text-align: center;
+                font-size: 20px;
+                cursor: grab;
+                padding: 8px 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="POST">
+            <input type="submit" value="Play">
+        </form>
+        {% if choice == 1 %}
+            <h1 style="color:black;background-color:#ffb81c;text-align:center;font-family:Impact;font-size:32pt">ROCK</h1>
+        {% elif choice == 2 %}
+            <h1 style="color:black;background-color:#9063cd;text-align:center;font-family:Georgia;font-size:32pt">PAPER</h1>
+        {% elif choice == 3 %}
+            <h1 style="color:black;background-color:#b5bd00;text-align:center;font-family:Ariel;font-size:32pt">SCISSORS</h1>
+		{% endif %}
+    </body>
+</html>
